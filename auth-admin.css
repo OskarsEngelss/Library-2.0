@@ -1,0 +1,200 @@
+:root {
+	--itemBrown: rgb(94, 70, 48);
+	--shadowBrown: rgb(59, 44, 29);
+	--faintWhite: rgba(255, 255, 255, 0.687);
+}
+* {
+    color: var(--faintWhite);
+	font-family: "Nova Square";
+}
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    margin: 0;
+    background-color: rgb(121, 92, 67);
+}
+
+header {
+	width: 100%;
+	height: 75px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 50px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.storeName {
+	height: inherit;
+	width: 800px;
+
+	display: flex;
+	justify-content: left;
+	align-items: center;
+    font-size: 40px;
+
+	margin: 0;
+	padding-left: 50px;
+	background-color: var(--itemBrown);
+	border-radius: 0px 0px 100px 0px;
+    box-shadow: 10px 10px var(--shadowBrown);
+    transition: 0.8s;
+}
+.storeName:hover {
+    box-shadow: 15px 8px var(--shadowBrown);
+}
+.storeNameLink {
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0;
+}
+.adminPannel {
+	height: inherit;
+
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+    padding: 0px 40px 0 70px;
+	border-radius: 0px 0px 0px 60px;
+	background-color: var(--itemBrown);
+    box-shadow: 0px 2px 0px 4px var(--shadowBrown);
+    transition: 0.8s;
+}
+.adminPannel:hover {
+	box-shadow: 0px 2px 0px 6px var(--shadowBrown);
+}
+.adminButtonCircle {
+	width: 120px;
+	height: 50px;
+
+    margin: 0px 15px;
+	background-color: rgb(118, 92, 66);
+	border: 2px solid rgb(39, 30, 21);
+	border-radius: 30%;
+	transition: 0.4s;
+
+    box-shadow: 6px 6px var(--shadowBrown);
+}
+.adminButtonCircle:hover {
+	transform: scaleX(1.1);
+}
+.adminButtons {
+	height: inherit;
+    width: inherit;
+    border-radius: inherit;
+
+    padding: 0;
+    background-color: inherit;
+	background: none;
+    color: var(--faintWhite);
+	font-family: "Nova Square";
+    font-size: 1.35em;
+    border: none;
+	cursor: pointer;
+	outline: inherit;
+    box-shadow: none;
+}
+
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    background-color: var(--itemBrown);
+    padding: 20px 100px 35px;
+    border-radius: 30px;
+    box-shadow: 10px 10px var(--shadowBrown);
+    transition: 0.7s;
+}
+div:hover{
+    box-shadow: 12px 8px var(--shadowBrown);
+}
+h1 {
+    margin: 0px 0px 15px;
+    font-size: 3em;
+}
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    padding: 7px 0px;
+    font-size: 1.8em;
+    font-weight: 500;
+}
+input {
+    width: 350px;
+    height: 30px;
+
+    margin: 3.5px 0px 0px;
+    color: black;
+    border: 2px solid black;
+    border-radius: 25px;
+    box-shadow: 4px 4px var(--shadowBrown);
+    transition: 1s;
+}
+input:hover {
+    transform: scaleX(1.05);
+}
+button {
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.3em;
+
+    margin: 7px 0px 7px;
+    padding: 6px 40px;
+    background-color: rgb(118, 92, 66);
+    border: 2px solid black;
+    border-radius: 25px;
+    box-shadow: 2px 2px var(--shadowBrown);
+    cursor: pointer;
+    transition: 0.4s;
+}
+button:hover {
+    transform: scaleX(1.05);
+}
+span {
+    margin: 8px 0px;
+}
+.invalid-data {
+    color: red;
+    font-size: 0.7em;
+    margin: 8px 0px 0px;
+}
+.borrowClarification {
+    width: fit-content;
+    height: fit-content;
+
+    font-size: 2em;
+    font-weight: 700;
+    box-shadow: none;
+}
+.borrowClarification:hover {
+    box-shadow: none;
+}
+p {
+    margin: 2px 0px;
+}
