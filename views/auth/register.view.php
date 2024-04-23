@@ -1,7 +1,8 @@
-<?php require "views/components/head.php" ?>
-<?php require "views/components/navbar.php" ?>
+<?php require "../views/components/head.php" ?>
+<?php require "../views/components/navbar.php" ?>
 
 <div>
+    <h1><?=$title?></h1>
     <form method="POST">
         <label>
             Username:
@@ -27,6 +28,7 @@
         </label>
         <button>Register</button>
     </form>
+    <a href="/login">Login Instead</a>
 </div>
 
-<?php require "views/components/footer.php" ?>
+<?php require "../views/components/footer.php" ?>

@@ -1,9 +1,9 @@
 <?php
 guest();
 
-require "Validator.php";
-require "Database.php";
-$config = require("config.php");
+require "../Core/Validator.php";
+require "../Core/Database.php";
+$config = require("../config.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $db = new Database($config);
@@ -39,5 +39,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $differentStyle = "auth-admin";
 $title = "Register";
-require "views/auth/register.view.php";
+require "../views/auth/register.view.php";
 ?>

@@ -1,5 +1,5 @@
-<?php require "views/components/head.php" ?>
-<?php require "views/components/navbar.php"?>
+<?php require "../views/components/head.php" ?>
+<?php require "../views/components/navbar.php"?>
 
 <?php function bookList($book) {?>
     <div class="bookInfo">
@@ -40,4 +40,4 @@
 </body>
 
 
-<?php require "views/components/footer.php" ?>
+<?php require "../views/components/footer.php" ?>

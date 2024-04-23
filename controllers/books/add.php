@@ -2,9 +2,9 @@
 auth();
 is_admin();
 
-require "Validator.php";
-require "Database.php";
-$config = require("config.php");
+require "../Core/Validator.php";
+require "../Core/Database.php";
+$config = require("../config.php");
 $db = new Database($config);
 
 
@@ -33,5 +33,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $differentStyle = "auth-admin";
 $title = "Add new book";
-require "views/books/add.view.php";
+require "../views/books/add.view.php";
 ?>

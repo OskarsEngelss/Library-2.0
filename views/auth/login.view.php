@@ -1,5 +1,5 @@
-<?php require "views/components/head.php" ?>
-<?php require "views/components/navbar.php" ?>
+<?php require "../views/components/head.php" ?>
+<?php require "../views/components/navbar.php" ?>
 
 <div>
     <h1><?=$title?></h1>
@@ -20,7 +20,7 @@
         </label>
         <button>Login</button>
     </form>
-    <a href="/register">Reģistrēt profilu</a>
+    <a href="/register">Register a profile</a>
 </div>
 
 <?php if (isset($_SESSION["flash"])) { ?>
@@ -28,4 +28,4 @@
     <?php ?>
 <?php } ?>
 
-<?php require "views/components/footer.php" ?>
+<?php require "../views/components/footer.php" ?>

@@ -1,8 +1,8 @@
 <?php
 auth();
 
-require "Database.php";
-$config = require("config.php");
+require "../Core/Database.php";
+$config = require("../config.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $db = new Database($config);

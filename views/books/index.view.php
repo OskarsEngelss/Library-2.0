@@ -1,5 +1,5 @@
-<?php require "views/components/head.php" ?>
-<?php require "views/components/navbar.php"?>
+<?php require "../views/components/head.php" ?>
+<?php require "../views/components/navbar.php"?>
 
 <?php function bookList($book) {?>
     <div class="bookInfo">
@@ -60,7 +60,9 @@
             <?php if (isset($_SESSION["user"])) { ?>
                 <header class="profileHeader">
                     <h4><?=$user["username"]?></h4>
-                    <img class="profileImage" src="https://www.pngkey.com/png/full/121-1219231_user-default-profile.png"/>
+                    <a  href="/setPicture">
+                        <img class="profileImage" src="<?php if (!empty($user["profilePicture"])) { ?> <?= $user["profilePicture"] ?> <?php } else { ?> https://www.pngkey.com/png/full/121-1219231_user-default-profile.png <?php } ?>" />
+                    </a>
                 </header>
                 <section class="reservedInfo">
                     <h2>Reserved books:</h2>
@@ -88,4 +90,4 @@
 </body>
 
 
-<?php require "views/components/footer.php" ?>
+<?php require "../views/components/footer.php" ?>

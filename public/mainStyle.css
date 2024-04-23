@@ -1,0 +1,403 @@
+:root {
+	--itemBrown: rgb(94, 70, 48);
+	--shadowBrown: rgb(59, 44, 29);
+	--faintWhite: rgba(255, 255, 255, 0.687);
+}
+* {
+	color: var(--faintWhite);
+	font-family: "Nova Square";
+}
+body {
+	margin: 0;
+	background-color: rgb(121, 92, 67);
+}
+
+header {
+	width: 100%;
+	height: 75px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 50px;
+}
+.storeName {
+	height: inherit;
+	width: 800px;
+
+	display: flex;
+	justify-content: left;
+	align-items: center;
+
+	margin: 0;
+	padding-left: 50px;
+	background-color: var(--itemBrown);
+	font-size: 40px;
+	border-radius: 0px 0px 100px 0px;
+    box-shadow: 10px 10px var(--shadowBrown);
+	transition: 0.8s;
+}
+.storeName:hover {
+    box-shadow: 15px 8px var(--shadowBrown);
+}
+.adminPannel {
+	height: inherit;
+
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+    padding: 0px 40px 0 70px;
+	border-radius: 0px 0px 0px 60px;
+	background-color: var(--itemBrown);
+    box-shadow: 0px 2px 0px 4px var(--shadowBrown);
+	transition: 0.8s;
+}
+.adminPannel:hover {
+	box-shadow: 0px 2px 0px 6px var(--shadowBrown);;
+}
+.adminButtonCircle {
+	width: 120px;
+	height: 50px;
+
+    margin: 0px 15px;
+	background-color: rgb(118, 92, 66);
+	border: 2px solid rgb(39, 30, 21);
+	border-radius: 30%;
+	box-shadow: 6px 6px var(--shadowBrown);
+	transition: 0.4s;
+}
+.adminButtonCircle:hover {
+	transform: scaleX(1.1);
+}
+.adminButtons {
+	height: inherit;
+    width: inherit;
+    border-radius: inherit;
+
+	background: none;
+    color: var(--faintWhite);
+	font-family: "Nova Square";
+    font-size: 1.35em;
+    border: none;
+	cursor: pointer;
+	outline: inherit;
+}
+
+main {
+	width: 100%;
+
+	display: flex;
+	justify-content: space-around;
+	margin: 0;
+}
+
+.bookList {
+	width: 850px;
+	height: 70vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+	background-color: var(--itemBrown);
+	border-radius: 15px 35px 15px 35px;
+    box-shadow: 10px 7px var(--shadowBrown);
+	transition: 1.2s;
+
+	overflow-y: scroll;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+.bookList:hover {
+	box-shadow: 8px 12px var(--shadowBrown);
+}
+.bookAvailabilityBox {
+    margin: 0px;
+	height: 100%;
+}
+a, .bookInfo, h2 {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	font-weight: 600;
+}
+h2 {
+	margin: 20px 0px 7px;
+	border-bottom: 3px solid var(--shadowBrown);
+}
+.bookInfo, .reservedBook, .reservedBookExpired {
+	border-radius: 15px;
+	margin: 8px 0px;
+	padding: 0px 15px;
+	border-bottom: 3px solid var(--itemBrown);
+	transition: 2s;
+}
+.bookInfo:hover, .reservedBook:hover {
+	background-color: rgb(96, 75, 56);
+	border-bottom: 3px solid var(--shadowBrown);
+}
+h2 {
+    font-size: 2.2em;
+}
+h3 {
+    font-size: 1.7em;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    font-size: 1.5em;
+}
+a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 0;
+}
+.edit-form, .delete-form {
+    width: fit-content;
+	height: fit-content;
+
+    margin: 10px 15px;
+	background-color: rgb(118, 92, 66);
+	border: 2px solid rgb(39, 30, 21);
+	border-radius: 30%;
+	transition: 0.4s;
+}
+.delete-form {
+	background-color: rgb(141, 62, 62);
+}
+.edit-form:hover, .delete-form:hover {
+	transform: scaleX(1.04);
+}
+.edit-button, .return-button {
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+
+	padding: 4px 20px;
+	background: none;
+    color: var(--faintWhite);
+	font-family: "Nova Square";
+    font-size: 1.35em;
+    border: none;
+	cursor: pointer;
+	outline: inherit;
+    box-shadow: 6px 6px var(--shadowBrown);
+}
+
+/* ^^^^^^ available book showcase ^^^^^^*/
+/* VVVVVV  user profile styling VVVVVV*/
+
+.profile {
+	position: relative;
+	width: 500px;
+	height: 500px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+	background-color: var(--itemBrown);
+	border-radius: 15px 35px 15px 35px;
+    box-shadow: 10px -10px var(--shadowBrown);
+	transition: 0.9s;
+}
+.profile:hover {
+	box-shadow: 11px -13px var(--shadowBrown);
+}
+.profileHeader {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 150px;
+	display: flex;
+	justify-content: space-around;
+	margin: 0;
+}
+h4 {
+    font-size: 2.2em;
+}
+.profileImage {
+	width: 100px;
+	height: 100px;
+	
+	border-radius: 50%;
+	border: 0.2vh solid var(--faintWhite);
+	transition: 1.5s;
+}
+.profileImage:hover {
+	transform: rotate(-12deg);
+}
+.reservedInfo {
+	width: inherit;
+	height: 330px;
+
+    position: absolute;
+	bottom: 5px;
+	left: 0;
+	display: flex;
+	flex-direction: column;	
+	justify-content: center;
+	align-items: center;
+
+	overflow-y: scroll;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+.reservedInfo::-webkit-scrollbar {
+	display: none;
+}
+.reservedBooks {
+	margin: 0;
+	height: 100%;
+}
+.reservedBook, .reservedBookExpired {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.reservedBookExpired {
+	background-color: var(--itemBrown);
+}
+.reservedBookExpired:hover {
+	background-color: rgb(141, 62, 62);
+}
+p {
+	text-align: center;
+	margin: 5px 0px;
+	font-weight: 700;
+}
+.return-button {
+    font-size: 0.8em;
+}
+.noAccountOptions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	font-size: 2.3em;
+}
+.loginButton {
+	width: fit-content;
+    height: fit-content;
+	font-size: 0.75em;
+
+    margin: 7px 0px 7px;
+    padding: 3px 25px;
+    background-color: rgb(118, 92, 66);
+    border: 2px solid black;
+    border-radius: 25px;
+    box-shadow: 2px 2px var(--shadowBrown);
+    cursor: pointer;
+    transition: 0.4s;
+}
+.loginButton:hover {
+	transform: scaleX(1.05);
+}
+.registerLink {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 1450px) {
+	.storeName {
+		width: fit-content;
+		padding-right: 80px;
+	}
+	main {
+		flex-direction: column-reverse;
+		align-items: center;
+		margin-bottom: 30px;
+	}
+	.profile {
+		margin-bottom: 40px;
+	}
+}
+@media only screen and (max-width: 1030px) {
+	.bookList {
+		width: fit-content;
+		height: fit-content;
+		padding: 13px 60px; 
+	}
+	.storeName {
+		width: 150px;
+		height: 100px;
+		padding-top: 20px;
+	}
+}
+@media only screen and (max-width: 895px) {
+	header {
+		flex-direction: column;
+		height: 155px;
+	}
+	.storeName {
+		width: 100%;
+		padding: 10px 0px;
+		border-radius: 0px;
+		justify-content: center;
+		box-shadow: 5px 0px var(--shadowBrown) inset;
+	}
+	.storeName:hover {
+        box-shadow: 12px 0px var(--shadowBrown) inset;
+    }
+	.adminPannel {
+		margin-top: 0px;
+		box-shadow: none;
+		padding: 0px 70px;
+		border-radius: 0px 0px 70px 70px;
+	}
+	h4 {
+		margin: 10px 0px;
+	}
+	.profileHeader {
+		height: fit-content;
+	}
+}
+@media only screen and (max-width: 635px) {
+	.profile {
+		width: 350px;
+		height: 550px;
+	}
+	.bookList {
+		width: fit-content;
+		height: fit-content;
+		padding: 13px 0px; 
+	}
+	.reservedInfo {
+		border-radius: inherit;
+	}
+	.adminPannel {
+		border-radius: 0px;
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 470px) {
+	.adminButtonCircle {
+		width: min-content;
+		padding: 7px 10px;
+	}
+}
+@media only screen and (max-width: 410px) {
+	.adminButtonCircle {
+		margin: 0px 5px;
+	}
+}

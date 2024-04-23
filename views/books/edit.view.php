@@ -1,5 +1,5 @@
-<?php require "views/components/head.php" ?>
-<?php require "views/components/navbar.php" ?>
+<?php require "../views/components/head.php" ?>
+<?php require "../views/components/navbar.php" ?>
 
 <div>
     <h1>Edit the book:</h1>
@@ -38,4 +38,4 @@
     </form>
 </div>
 
-<?php require "views/components/footer.php" ?>
+<?php require "../views/components/footer.php" ?>

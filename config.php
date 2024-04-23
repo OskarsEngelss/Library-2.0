@@ -3,7 +3,7 @@ return [
   "host" => "localhost",
   "dbname" => "Library_IPb22",
   "user" => "root",
-  "password" => "",
+  "password" => "root",
   "charset" => "utf8mb4"
 ];
 ?>

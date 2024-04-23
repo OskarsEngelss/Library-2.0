@@ -1,6 +1,7 @@
 <?php
-require "Database.php";
-$config = require("config.php");
+date_default_timezone_set('Europe/Moscow');
+require "../Core/Database.php";
+$config = require("../config.php");
 $db = new Database($config);
 
 $query = "SELECT * FROM books";
@@ -27,5 +28,5 @@ if (isset($_SESSION["user"])) {
 
 $differentStyle = "mainStyle";
 $title = "List of books";
-require "views/books/index.view.php";
+require "../views/books/index.view.php";
 ?>

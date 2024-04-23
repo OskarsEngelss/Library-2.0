@@ -2,9 +2,9 @@
 auth();
 is_admin();
 
-require "Validator.php";
-require "Database.php";
-$config = require("config.php");
+require "../Core/Validator.php";
+require "../Core/Database.php";
+$config = require("../config.php");
 $db = new Database($config);
 
 $query = "SELECT * FROM books WHERE id=:id";
@@ -40,5 +40,5 @@ $book = $db->execute($query, $params)->fetch();
 
 $differentStyle = "auth-admin";
 $title = "Edit the book";
-require "views/books/edit.view.php";
+require "../views/books/edit.view.php";
 ?>

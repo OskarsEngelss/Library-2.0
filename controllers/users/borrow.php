@@ -1,9 +1,9 @@
 <?php
 auth();
 
-require "Validator.php";
-require "Database.php";
-$config = require("config.php");
+require "../Core/Validator.php";
+require "../Core/Database.php";
+$config = require("../config.php");
 $db = new Database($config);
 
 $query = "SELECT * FROM books WHERE id=:id;";
@@ -11,6 +11,7 @@ $params = [
     ":id" => $_GET["id"]
 ];
 $book = $db->execute($query, $params)->fetch();
+is_available($book["availability"]);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $errors = [];
@@ -34,5 +35,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $differentStyle = "auth-admin";
 $title = "Borrowing a book";
-require "views/users/borrow.view.php";
+require "../views/users/borrow.view.php";
 ?>

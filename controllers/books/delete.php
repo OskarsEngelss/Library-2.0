@@ -2,8 +2,8 @@
 auth();
 is_admin();
 
-require "Database.php";
-$config = require("config.php");
+require "../Core/Database.php";
+$config = require("../config.php");
 $db = new Database($config);
 
 
@@ -26,5 +26,5 @@ $books = $db->execute($query, $params)->fetchAll();
 
 $differentStyle = "mainStyle";
 $title = "Delete Book";
-require "views/books/delete.view.php";
+require "../views/books/delete.view.php";
 ?>
