@@ -21,6 +21,9 @@
         <article class="bookList">
             <section class="bookAvailabilityBox">
                 <h2>Available Books</h2>
+                <?php if(isset($errors["taken_book"])) { ?> 
+                    <p class="invalid-data"><?= $errors["taken_book"] ?></p>
+                <?php } ?>
                 <?php foreach($books as $book) { ?>
                     <?php if ($book["availability"] > 0) { ?>
                         <?php bookList($book); ?>

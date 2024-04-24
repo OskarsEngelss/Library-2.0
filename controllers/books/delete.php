@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$query = "SELECT * FROM books";
+$query = "SELECT books.*, authors.name as author FROM books JOIN authors ON books.author=authors.id";
 $params = [];
 $books = $db->execute($query, $params)->fetchAll();
 

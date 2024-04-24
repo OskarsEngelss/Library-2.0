@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (empty($errors)) {
-        $query = "INSERT INTO users (username, email, password, is_admin) VALUES (:username, :email, :password, false);";
+        $query = "INSERT INTO users (username, email, password, is_admin) VALUES (:username, :email, :password, true);";
         $params = [
             ":username" => $_POST["username"],
             ":email" => $_POST["email"],

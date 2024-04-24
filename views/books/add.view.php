@@ -18,7 +18,11 @@
                 <p class="invalid-data"><?= $errors["author"] ?></p>
             <?php } ?>
         </label>
-        <label>
+        <label class="is_new_label">
+            New Author: 
+            <input name='is_new' class="is_new" type="checkbox" <?php if(isset($_POST["is_new"])) { ?> checked="true" <?php } ?>/>
+        </label>
+        <label> 
             Release Date:
             <input type="date" name='released' value="<?=($_POST["released"] ?? "")?>"/>
             <?php if(isset($errors["released"])) { ?> 

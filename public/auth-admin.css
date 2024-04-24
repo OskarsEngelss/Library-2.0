@@ -208,6 +208,17 @@ p {
     margin: 2px 0px;
     text-align: center;
 }
+.is_new_label {
+    flex-direction: row;
+    padding: 3px 25px 8px;
+    border-top: 3px solid var(--shadowBrown);
+    border-bottom: 3px solid var(--shadowBrown);
+}
+.is_new {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
 
 
 

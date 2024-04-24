@@ -128,6 +128,7 @@ a, .bookInfo, h2 {
 }
 h2 {
 	margin: 20px 0px 7px;
+	font-size: 2.2em;
 	border-bottom: 3px solid var(--shadowBrown);
 }
 .bookInfo, .reservedBook, .reservedBookExpired {
@@ -140,9 +141,6 @@ h2 {
 .bookInfo:hover, .reservedBook:hover {
 	background-color: rgb(96, 75, 56);
 	border-bottom: 3px solid var(--shadowBrown);
-}
-h2 {
-    font-size: 2.2em;
 }
 h3 {
     font-size: 1.7em;
@@ -319,6 +317,13 @@ p {
 }
 .registerLink {
     text-decoration: underline;
+}
+.invalid-data {
+    color: red;
+    font-size: 1.4em;
+    margin: 8px 0px 0px;
+	text-align: center;
+	font-weight: 500;
 }
 
 @media only screen and (max-width: 1450px) {
