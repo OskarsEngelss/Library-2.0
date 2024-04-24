@@ -240,6 +240,9 @@ h4 {
 .profileImage:hover {
 	transform: rotate(-12deg);
 }
+.reservedBooksTitle {
+	margin: 55px 0px 0px;
+}
 .reservedInfo {
 	width: inherit;
 	height: 330px;
@@ -364,6 +367,9 @@ p {
 		box-shadow: none;
 		padding: 0px 70px;
 		border-radius: 0px 0px 70px 70px;
+	}
+	.adminPannel:hover {
+		box-shadow: none;
 	}
 	h4 {
 		margin: 10px 0px;

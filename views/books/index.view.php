@@ -65,7 +65,7 @@
                     </a>
                 </header>
                 <section class="reservedInfo">
-                    <h2>Reserved books:</h2>
+                    <h2 class="reservedBooksTitle">Reserved books:</h2>
                     <ul class="reservedBooks">
                         <?php if (empty($taken_books)) { ?>
                             <p>Borrow some, by clicking on a book!</p>

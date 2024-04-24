@@ -4,7 +4,7 @@ require "../Core/Database.php";
 $config = require("../config.php");
 $db = new Database($config);
 
-$query = "SELECT * FROM books";
+$query = "SELECT books.*, authors.name as author FROM books JOIN authors ON books.author=authors.id;";
 $params = [];
 
 if (isset($_SESSION["user"])) {

@@ -6,22 +6,32 @@ require "../Core/Database.php";
 $config = require("../config.php");
 $db = new Database($config);
 
-
-$query = "SELECT * FROM books";
-$params = [];
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $query = "DELETE FROM books WHERE id=:id";
+    $errors = [];
+
+    $is_taken_query = "SELECT * FROM taken_books WHERE book_id=:id";
     $params = [
         ":id" => $_POST["id"]
     ];
-    
-    $db->execute($query, $params);
+    $taken_books = $db->execute($is_taken_query, $params)->fetchAll();
 
-    header("Location: /book-delete");
-    die();
+    if (!empty($taken_books)) $errors["taken_book"] = "Borrowed books can't be deleted!";
+
+    if (empty($errors)) {
+        $query = "DELETE FROM books WHERE id=:id";
+        $params = [
+            ":id" => $_POST["id"]
+        ];
+        
+        $db->execute($query, $params);
+        
+        header("Location: /book-delete");
+        die();
+    }
 }
 
+$query = "SELECT * FROM books";
+$params = [];
 $books = $db->execute($query, $params)->fetchAll();
 
 $differentStyle = "mainStyle";
